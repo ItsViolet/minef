@@ -1,0 +1,207 @@
+<?php
+session_start();
+require("SimpleAuth.php");
+$login = new Login;
+$login->authorize();
+?>
+<html>
+   <head>
+       <meta name="viewport" content="width=device-width, initial-scale=1" />
+       <link rel="stylesheet" href="index.css">
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+       <script src="index.js"></script>
+   </head>
+   <body onload="main()">
+   <div class="server-list">
+       <div class="server-entry">
+         <h2 id="title">Lallu SMP</h2>
+         <div class="status-row">
+           <div class="status-info">
+             <ul>
+               <li><i class="fa fa-globe"></i>Java: syrinx.myserver.gs</li>
+               <li><i class="fa fa-server"></i>Bedrock: mc.syrinx.life:11936</li>
+             </ul>
+             <p class="last-seen">-4m (2018-01-01T13:41Z)</p>
+           </div>
+           <div class="report-history">
+             <div class="timeslice">
+               <div class="entry"></div>
+               <div class="entry"></div>
+               <div class="entry"></div>
+               <div class="entry"></div>
+               <div class="entry"></div>
+               <div class="entry"></div>
+               <div class="entry"></div>
+               <div class="entry"></div>
+             </div>
+             <div class="timeslice">
+               <div class="entry"></div>
+               <div class="entry"></div>
+             </div>
+             <div class="timeslice">
+               <div class="entry"></div>
+               <div class="entry"></div>
+               <div class="entry"></div>
+             </div>
+             <div class="timeslice">
+               <div class="entry"></div>
+               <div class="entry"></div>
+               <div class="entry"></div>
+               <div class="entry"></div>
+               <div class="entry"></div>
+             </div>
+             <div class="timeslice">
+               <div class="entry"></div>
+               <div class="entry"></div>
+               <div class="entry"></div>
+               <div class="entry"></div>
+               <div class="entry"></div>
+               <div class="entry"></div>
+             </div>
+             <div class="timeslice">
+               <div class="entry"></div>
+               <div class="entry"></div>
+               <div class="entry"></div>
+               <div class="entry"></div>
+               <div class="entry"></div>
+             </div>
+             <div class="timeslice">
+               <div class="entry"></div>
+               <div class="entry"></div>
+               <div class="entry"></div>
+               <div class="entry"></div>
+             </div>
+             <div class="timeslice">
+               <div class="entry"></div>
+               <div class="entry"></div>
+             </div>
+             <div class="timeslice">
+               <div class="entry"></div>
+               <div class="entry"></div>
+               <div class="entry"></div>
+             </div>
+             <div class="timeslice">
+               <div class="entry"></div>
+               <div class="entry"></div>
+               <div class="entry"></div>
+               <div class="entry"></div>
+               <div class="entry"></div>
+               <div class="entry"></div>
+               <div class="entry"></div>
+             </div>
+             <div class="timeslice">
+               <div class="entry"></div>
+               <div class="entry"></div>
+               <div class="entry"></div>
+               <div class="entry"></div>
+               <div class="entry"></div>
+             </div>
+             <div class="timeslice">
+               <div class="entry"></div>
+               <div class="entry"></div>
+             </div>
+             <div class="timeslice">
+               <div class="entry"></div>
+             </div>
+             <div class="timeslice">
+             </div>
+             <div class="timeslice">
+               <div class="entry"></div>
+               <div class="entry"></div>
+               <div class="entry"></div>
+               <div class="entry"></div>
+             </div>
+             <div class="timeslice">
+               <div class="entry"></div>
+               <div class="entry"></div>
+               <div class="entry"></div>
+               <div class="entry"></div>
+               <div class="entry"></div>
+               <div class="entry"></div>
+             </div>
+             <div class="timeslice">
+               <div class="entry"></div>
+               <div class="entry"></div>
+               <div class="entry"></div>
+             </div>
+             <div class="timeslice">
+               <div class="entry"></div>
+               <div class="entry"></div>
+               <div class="entry"></div>
+               <div class="entry"></div>
+               <div class="entry"></div>
+             </div>
+             <div class="timeslice">
+               <div class="entry"></div>
+               <div class="entry"></div>
+               <div class="entry"></div>
+               <div class="entry"></div>
+             </div>
+             <div class="timeslice">
+               <div class="entry"></div>
+               <div class="entry"></div>
+             </div>
+             <div class="timeslice">
+               <div class="entry"></div>
+               <div class="entry"></div>
+               <div class="entry"></div>
+               <div class="entry"></div>
+               <div class="entry"></div>
+             </div>
+             <div class="timeslice">
+               <div class="entry"></div>
+               <div class="entry"></div>
+               <div class="entry"></div>
+               <div class="entry"></div>
+               <div class="entry"></div>
+             </div>
+             <div class="timeslice">
+               <div class="entry"></div>
+               <div class="entry"></div>
+             </div>
+             <div class="timeslice">
+               <div class="entry"></div>
+               <div class="entry"></div>
+               <div class="entry"></div>
+             </div>
+           </div>
+         </div>
+         <br>
+         <hr>
+         <div>
+           <h2 id="on">Server status: CHECKING</h3>
+         </div>
+         <div id="kk" style="visibility: hidden;">
+         <hr>
+         <div>
+           <h4 id="uptime">Time online: </h6>
+           <h4 id="oplayers">Players online: </h6>
+           
+         </div>
+         <hr>
+         <div>
+           <h3>Console: <input type="text" id="e">   <button onclick="exec(document.getElementById('e').value);">Execute</button></h3>
+         </div>
+         <hr>
+         <div>
+           <button onclick="backup();">Download backup</button>
+         </div>
+         <hr>
+         <div>
+           <button>Trigger in-game backup</button>
+         </div>
+         <hr>
+         <div>
+           <h2>Currently online:</h2>
+           <hr style="height:0.02em;">
+           <div id="onp"></div>
+         </div>
+       </div>
+       </div>
+       
+     </div>
+     <p style="visibility:hidden;" id="a"></p>
+     <p style="visibility:hidden;" id="b">0</p>
+     <p style="visibility:hidden;" id="c">0</p>
+   </body>
+</html>
